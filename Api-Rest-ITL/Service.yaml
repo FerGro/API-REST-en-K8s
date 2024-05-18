@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tu-aplicacion-service
+spec:
+  selector:
+    app: tu-aplicacion
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

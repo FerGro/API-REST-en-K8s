@@ -1,0 +1,46 @@
+# Solicitud GET para obtener todas las carreras
+GET http://api.mgalan.com/Carreras HTTP/1.1
+
+###
+
+# Solicitud GET para obtener una carrera específica por ID
+GET http://api.mgalan.com/Carreras/2 HTTP/1.1
+
+###
+
+# Solicitud POST para crear una nueva carrera
+POST http://api.mgalan.com/Carreras HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Ingeniería en Logística",
+    "años": 4.5,
+    "creditos": 260,
+    "especialidades": [
+        {
+            "materias": [
+                "Ingeniería Económica",
+                "Innovación",
+                "Comercio Internacional",
+                "Geografía para el Transporte",
+                "Formulación y Evaluación de Proyectos",
+                "Gestión de Proyectos"
+            ]
+        }
+    ]
+}
+
+###
+
+# Solicitud PUT para actualizar una carrera por ID
+PUT http://api.mgalan.com/Carreras/7 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Ingeniería Mecatronica"
+}
+
+###
+
+# Solicitud DELETE para eliminar una carrera por ID
+DELETE http://api.mgalan.com/Carreras/8 HTTP/1.1

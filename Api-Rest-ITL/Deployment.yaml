@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tu-aplicacion-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: tu-aplicacion
+  template:
+    metadata:
+      labels:
+        app: tu-aplicacion
+    spec:
+      containers:
+      - name: api-rest-itl:latest
+        image: api-rest-itl
+        ports:
+        - containerPort: 80
